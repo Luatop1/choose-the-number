@@ -30,7 +30,7 @@ while True:
             read_file.close()
             write_file = open("data/record.txt", "w")
             write_file.write(str(attempts))
-            write_file.close()
+            write_file.close() #
         else:
             print(f"Вы угадали число за {attempts} попыток! Ваш рекорд: {saved_attempt}")
             read_file.close()
