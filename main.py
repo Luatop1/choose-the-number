@@ -16,7 +16,12 @@ while True:
             print("Меньше")
         elif user_number < number:
             print("Больше")
-        user_number = int(input("Попробуйте еще раз: "))
+        while True:
+            try:
+                user_number = int(input("Попробуйте еще раз: "))
+                break
+            except ValueError:
+                print("Введите число!")
     else:
         read_file = open("data/record.txt", "r")
         saved_attempt = int(read_file.read(2))
